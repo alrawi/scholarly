@@ -348,3 +348,8 @@ def search_author_custom_url(url):
     soup = _get_soup(_HOST+url)
     return _search_citation_soup(soup)
 
+def search_author_gsid(gsid):
+    url = _CITATIONAUTH.format(requests.utils.quote(gsid))
+    print(url)
+    soup = _get_soup(_HOST+url)
+    return _search_citation_soup(soup)
